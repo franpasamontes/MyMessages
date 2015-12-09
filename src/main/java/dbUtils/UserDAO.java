@@ -15,7 +15,7 @@ public class UserDAO extends DBCon{
 	 * User's db generation
 	 * @param _user
 	 */
-	public void createUser(User _user){
+	public static void createUser(User _user){
 		DBCon dbc = new DBCon();
 		
 		String sqlInsertUser = ("INSERT INTO user(idUser,name,email) VALUES (" + _user.getId() + ",'" + _user.getName() + "','" + _user.getEmail() + "')");
@@ -36,7 +36,7 @@ public class UserDAO extends DBCon{
 	 * @param _idUser
 	 * @param _msg
 	 */
-	public void addUsersMessage(int _idUser, String _msg){
+	public static void addUsersMessage(int _idUser, String _msg){
 		DBCon dbc = new DBCon();
 		
 		String sqlInsertUser = ("INSERT INTO message(userId,msg) VALUES (" + _idUser + ",'" + _msg + "')");

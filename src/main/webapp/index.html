@@ -11,7 +11,12 @@
 		
 		<h2>¿Eres nuevo? Reg&iacute;strate: </h2><br>
 		<!-- Formulario de registro de usuario -->
-		
+		<form action="rest/user/add" method="post">
+			<p>Identificador(n&uacute;mero): <input type="text" name="id"/></p>
+			<p>Nombre: <input type="text" name="name"/></p>
+			<p>E-mail: <input type="text" name="email"/></p>
+			<input type="submit" value="Add new user"/>
+		</form>
 		<br>	
 		<hr>
 		<h2>¿Ya tienes cuenta de usuario? L&oacute;gate: </h2><br>

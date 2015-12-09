@@ -17,7 +17,7 @@ public class MessageDAO {
 	 * 	
 	 * @return list with all the messages stored in db
 	 */
-	public ArrayList<Message> getMsgs(){
+	public static ArrayList<Message> getMsgs(){
 		ArrayList<Message> msgList = new ArrayList<Message>();
 		
 		DBCon dbc = new DBCon();
@@ -47,7 +47,7 @@ public class MessageDAO {
 	 * 	
 	 * @return list with all the messages stored in db from a concrete user
 	 */
-	public ArrayList<Message> getMsgsUser(int _idUser){
+	public static ArrayList<Message> getMsgsUser(int _idUser){
 		ArrayList<Message> msgList = new ArrayList<Message>();
 		
 		DBCon dbc = new DBCon();
