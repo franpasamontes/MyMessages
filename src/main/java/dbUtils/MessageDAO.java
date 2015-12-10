@@ -22,7 +22,7 @@ public class MessageDAO {
 		
 		DBCon dbc = new DBCon();
 		
-		String sqlSelect = ("SELECT * FROM message");
+		String sqlSelect = ("SELECT * FROM message ORDER BY userId");
 	
 		try{
 			ResultSet rsSqlSelect = dbc.getConnection().createStatement().executeQuery(sqlSelect);
@@ -59,7 +59,7 @@ public class MessageDAO {
 			while (rsSqlSelect.next()){
 				Message aMsg = null;
 				aMsg = new Message(rsSqlSelect.getInt("userId"),rsSqlSelect.getString("msg")); 
-				
+				//System.out.println(aMsg.getUserId() + ";" + aMsg.getMsg() + ";\n");
 				msgList.add(aMsg);
 			}
 		}

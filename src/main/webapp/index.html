@@ -15,16 +15,41 @@
 			<p>Identificador(n&uacute;mero): <input type="text" name="id"/></p>
 			<p>Nombre: <input type="text" name="name"/></p>
 			<p>E-mail: <input type="text" name="email"/></p>
-			<input type="submit" value="Add new user"/>
+			<input type="submit" value="A&ntilde;adir nuevo usuario"/>
 		</form>
 		<br>	
 		<hr>
-		<h2>¿Ya tienes cuenta de usuario? L&oacute;gate: </h2><br>
-		<!-- Formulario de login -->
-		
-		
+		<h2>¿Ya tienes cuenta de usuario? Env&iacute;a un mensaje: </h2><br>
+		<!-- Formulario de mensaje -->
+		<form action="rest/user/addMessage" method="post">
+			<p>Identificador(n&uacute;mero) de usuario: <input type="text" name="id"/></p>
+			<p>Mensaje: <input type="text" name="msg"/></p>
+			<input type="submit" value="A&ntilde;adir nuevo mensaje"/>
+		</form>
 		<br>
 		<hr>
+		<h2>Todos los mensajes: </h2><br>
+		<!-- Formulario para ver mensajes -->
+		<form action="rest/message/viewAll" method="post">
+			<input type="submit" value="Ver todos los mensajes"/>
+		</form>
+		<br>
+		A csv: 
+		<form action="rest/message/AllMsgs.csv" method="post">
+			<input type="submit" value="Exportar"/>
+		</form>
+		<hr>
+		<h2>Todos los mensajes de un usuario: </h2><br>
+		<!-- Formulario para mensajes de un usuario-->
+		<form action="rest/message/viewUsersMsg" method="post">
+			<p>Identificador(n&uacute;mero) de usuario: <input type="text" name="id"/></p>
+			<input type="submit" value="Ver todos los mensajes de un usuario"/>
+		</form>
+		
+		
+		
+		
+		
 		<br>
 		<div id="footer" align="center">2015 &bull; Fco Pasamontes</div>
 	</body>
